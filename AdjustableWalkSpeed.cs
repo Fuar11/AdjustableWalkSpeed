@@ -16,8 +16,6 @@ namespace AdjustableWalkSpeed
         public override void OnUpdate()
         {
 
-            //testing
-
             if (Input.mouseScrollDelta.y < 0 && !InterfaceManager.IsOverlayActiveCached())
             {
                 walkSpeedMultiplier -= 0.1f;
