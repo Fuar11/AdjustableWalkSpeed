@@ -25,12 +25,7 @@ namespace AdjustableWalkSpeed.Patches
                 {
                     __result *= Main.walkSpeedMultiplier;
                 }
-
-                
-               
             }
         }
-
-
     }
 }

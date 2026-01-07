@@ -16,13 +16,13 @@ namespace AdjustableWalkSpeed
         public override void OnUpdate()
         {
 
-            if (Input.mouseScrollDelta.y < 0 && !InterfaceManager.IsOverlayActiveCached())
+            if (Input.mouseScrollDelta.y < 0 && !InterfaceManager.IsOverlayActiveCached() && !InterfaceManager.DetermineIfOverlayIsActive() && !GameManager.GetPlayerManagerComponent().IsInPlacementMode())
             {
                 walkSpeedMultiplier -= 0.1f;
                 walkSpeedMultiplier = Mathf.Clamp(walkSpeedMultiplier, 0.3f, 1);
             }
 
-            if (Input.mouseScrollDelta.y > 0 && !InterfaceManager.IsOverlayActiveCached())
+            if (Input.mouseScrollDelta.y > 0 && !InterfaceManager.IsOverlayActiveCached() && !InterfaceManager.DetermineIfOverlayIsActive() && !GameManager.GetPlayerManagerComponent().IsInPlacementMode())
             {
                 walkSpeedMultiplier += 0.1f;
                 walkSpeedMultiplier = Mathf.Clamp(walkSpeedMultiplier, 0.3f, 1);
